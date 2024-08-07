@@ -1,26 +1,33 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "baseUrl": "src",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
     "allowJs": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
+    "noEmit": true,
+    "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "preserve",
+    "incremental": true,
+    "useUnknownInCatchVariables": false
   },
   "include": [
-    "src"
-  ]
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/contexts/JWTContext.js",
+    "src/sections/auth/withAuth.js",
+    "src/components/menuPopOver.tsx",
+    "src/components/templatesStyle.jsx"
+, "src/contexts/SocketContext.tsx", "src/utils/getCouponDiscount.js"  ],
+  "exclude": ["node_modules"]
 }
